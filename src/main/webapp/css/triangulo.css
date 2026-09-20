@@ -1,0 +1,1069 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #eef8ff;
+
+    color: #0756a3;
+
+    min-height: 100vh;
+
+    padding: 24px;
+}
+
+
+/* =========================
+   ENCABEZADO
+   ========================= */
+
+.encabezado {
+
+    width: 100%;
+
+    min-height: 100px;
+
+    background: rgba(255,255,255,0.95);
+
+    border: 2px solid #c8eaff;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px 28px;
+
+    margin-bottom: 26px;
+
+    box-shadow:
+        0 4px 15px rgba(0,120,220,0.06);
+}
+
+
+.marca {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+.logo-upla {
+
+    width: 82px;
+
+    height: 62px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+.separador {
+
+    width: 2px;
+
+    height: 50px;
+
+    background: #a7dafa;
+}
+
+
+.titulo-proyecto h1 {
+
+    font-size: 25px;
+
+    color: #0756a3;
+
+    margin-bottom: 4px;
+}
+
+
+.titulo-proyecto p {
+
+    color: #4b92d5;
+
+    font-size: 16px;
+}
+
+
+.teorema {
+
+    border: 2px solid #9ed9ff;
+
+    background: #edf9ff;
+
+    color: #0874c9;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   CONTENEDOR
+   ========================= */
+
+.contenedor {
+
+    max-width: 1500px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr
+        1fr;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   PANEL
+   ========================= */
+
+.panel {
+
+    background:
+        rgba(255,255,255,0.95);
+
+    border:
+        2px solid #c8eaff;
+
+    border-radius: 20px;
+
+    padding: 26px;
+
+    box-shadow:
+        0 5px 20px rgba(0,120,220,0.05);
+}
+
+
+/* =========================
+   TITULOS
+   ========================= */
+
+.titulo-seccion {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.icono {
+
+    min-width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: #e0f5ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+
+.titulo-seccion h2 {
+
+    font-size: 23px;
+
+    color: #0756a3;
+
+    margin-bottom: 7px;
+}
+
+
+.titulo-seccion p {
+
+    color: #5995ce;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CAMPOS
+   ========================= */
+
+.campos {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 26px;
+}
+
+
+.campo {
+
+    width: 100%;
+}
+
+
+.cabecera-campo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
+.cabecera-campo label {
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: #0874c8;
+}
+
+
+.variable {
+
+    background: #e5f5ff;
+
+    color: #2388ce;
+
+    border-radius: 18px;
+
+    padding: 7px 14px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.entrada {
+
+    height: 62px;
+
+    border:
+        2px solid #9dd9ff;
+
+    border-radius: 15px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+.entrada input {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding:
+        0 20px;
+
+    font-size: 20px;
+
+    color: #0756a3;
+}
+
+
+.entrada input::placeholder {
+
+    color: #8bb6d7;
+}
+
+
+.unidad {
+
+    width: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #7baed4;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   BOTÓN
+   ========================= */
+
+.boton-calcular {
+
+    width: 100%;
+
+    height: 58px;
+
+    margin-top: 28px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #128bd5,
+            #0874c8
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.boton-calcular:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,120,220,0.25);
+}
+
+
+/* =========================
+   REPRESENTACIÓN
+   ========================= */
+
+.representacion {
+
+    grid-column: 2;
+
+    grid-row: 1 / 3;
+}
+
+
+.grafico {
+
+    height: 440px;
+
+    border-radius: 18px;
+
+    background-color: #f5fbff;
+
+    background-image:
+
+        radial-gradient(
+            #dceff9 1.5px,
+            transparent 1.5px
+        );
+
+    background-size: 25px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   TRIÁNGULO SVG
+   ========================= */
+
+.svg-triangulo {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* CATETO VERTICAL */
+
+.svg-triangulo .cateto-vertical {
+    stroke: #0785d1;
+    stroke-width: 6;
+    stroke-linecap: round;
+
+    /* IMPORTANTE: elimina estilos anteriores */
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+/* CATETO HORIZONTAL */
+
+.svg-triangulo .cateto-horizontal {
+    stroke: #4169e1;
+    stroke-width: 6;
+    stroke-linecap: round;
+
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+/* HIPOTENUSA */
+
+.svg-triangulo .hipotenusa {
+    stroke: #172d68;
+    stroke-width: 6;
+    stroke-linecap: round;
+
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+/* ÁNGULO RECTO */
+
+.svg-triangulo .angulo-recto {
+    fill: none;
+    stroke: #172d68;
+    stroke-width: 3;
+
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+
+/* =========================
+   ETIQUETAS DEL TRIÁNGULO
+   ========================= */
+
+.svg-triangulo .etiqueta-blanca {
+    fill: white;
+    stroke: #b9e2fa;
+    stroke-width: 2;
+}
+
+.svg-triangulo .etiqueta-hipotenusa {
+    fill: #0879dc;
+    stroke: #0879dc;
+    stroke-width: 2;
+}
+
+.svg-triangulo .texto-etiqueta {
+    fill: #0874c9;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.svg-triangulo .texto-hipotenusa {
+    fill: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   ÁNGULO RECTO
+   ========================= */
+
+.angulo-recto {
+
+    position: absolute;
+
+    left: calc(18% + 4px);
+
+    bottom: calc(10% + 4px);
+
+    width: 22px;
+
+    height: 22px;
+
+    border-left: 2px solid #4e78ef;
+
+    border-top: 2px solid #4e78ef;
+}
+
+
+/* =========================
+   ETIQUETAS
+   ========================= */
+
+.etiqueta-a,
+.etiqueta-b,
+.etiqueta-c {
+
+    position: absolute;
+
+    background: white;
+
+    border: 1px solid #b9e2fa;
+
+    border-radius: 12px;
+
+    padding: 9px 16px;
+
+    color: #0874c8;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(0,120,220,0.06);
+
+    white-space: nowrap;
+}
+
+
+.etiqueta-a {
+
+    left: 46%;
+
+    bottom: 2%;
+}
+
+
+.etiqueta-b {
+
+    left: 6%;
+
+    bottom: 45%;
+}
+
+
+.etiqueta-c {
+
+    left: 55%;
+
+    top: 26%;
+
+    background: #2874e8;
+
+    color: white;
+
+    border-color: #2874e8;
+}
+
+
+/* =========================
+   INFORMACIÓN
+   ========================= */
+
+.informacion {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-top: 24px;
+
+    padding: 18px;
+
+    background: #effaff;
+
+    border: 1px solid #c8eaff;
+
+    border-radius: 15px;
+}
+
+
+.info-icono {
+
+    color: #0874c8;
+
+    font-size: 22px;
+}
+
+
+.informacion p {
+
+    color: #4b92d5;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   RESULTADO
+   ========================= */
+
+.resultado {
+
+    grid-column: 1;
+
+    min-height: 390px;
+}
+
+
+.titulo-resultado {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 24px;
+}
+
+
+.resultado-icono {
+
+    color: #0874c8;
+}
+
+
+.titulo-resultado h2 {
+
+    font-size: 23px;
+}
+
+
+.estado {
+
+    margin-left: auto;
+
+    background: #d9faf2;
+
+    color: #14a88d;
+
+    padding: 9px 16px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.resultado-contenido {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff8ff,
+            #e5f3ff
+        );
+
+    border-radius: 15px;
+
+    padding: 26px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.resultado-contenido h3 {
+
+    color: #2874c8;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+
+.numero {
+
+    font-size: 64px;
+
+    font-weight: bold;
+
+    color: #0759ae;
+
+    line-height: 1;
+}
+
+
+.numero span {
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+.formula-resultado {
+
+    border:
+        2px solid #8ed0f7;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 13px 18px;
+
+    color: #0759ae;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   FÓRMULA
+   ========================= */
+
+.formula-aplicada {
+
+    margin-top: 26px;
+}
+
+
+.formula-aplicada h3 {
+
+    color: #0874c8;
+
+    font-size: 17px;
+
+    margin-bottom: 12px;
+}
+
+
+.formula-box {
+
+    min-height: 65px;
+
+    background: #eaf6ff;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    color: #0759ae;
+
+    font-size: 20px;
+}
+
+
+.formula-box span {
+
+    width: 1px;
+
+    height: 30px;
+
+    background: #b4dff7;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1100px) {
+
+    .contenedor {
+
+        grid-template-columns: 1fr;
+    }
+
+    .representacion {
+
+        grid-column: 1;
+
+        grid-row: auto;
+    }
+
+    .resultado {
+
+        grid-column: 1;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    body {
+
+        padding: 10px;
+    }
+
+
+    .encabezado {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    .teorema {
+
+        align-self: stretch;
+
+        text-align: center;
+    }
+
+
+    .campos {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .resultado-contenido {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .formula-resultado {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .numero {
+
+        font-size: 48px;
+    }
+
+
+    .grafico {
+
+        height: 350px;
+    }
+
+
+    .estado {
+
+        display: none;
+    }
+}
+/* =========================
+   REPRESENTACIÓN TRIÁNGULO
+   ========================= */
+
+.visual {
+    grid-column: 2;
+    min-height: 700px;
+}
+
+
+/* CONTENEDOR DEL GRÁFICO */
+
+.grafico-triangulo {
+    width: 100%;
+    height: 440px;
+    margin-top: 25px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #f5fbff;
+    border: 1px solid #cbeafb;
+}
+
+
+/* SVG */
+
+.svg-triangulo {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* CATETO VERTICAL */
+
+.cateto-vertical {
+    stroke: #08a9df;
+    stroke-width: 7;
+    stroke-linecap: round;
+}
+
+
+/* CATETO HORIZONTAL */
+
+.cateto-horizontal {
+    stroke: #4169e1;
+    stroke-width: 7;
+    stroke-linecap: round;
+}
+
+
+/* HIPOTENUSA */
+
+.hipotenusa {
+    stroke: #102d75;
+    stroke-width: 7;
+    stroke-linecap: round;
+}
+
+
+/* ÁNGULO DE 90° */
+
+.angulo-recto {
+    fill: none;
+    stroke: #4169e1;
+    stroke-width: 3;
+}
+
+
+/* ETIQUETAS BLANCAS */
+
+.etiqueta-blanca {
+    fill: white;
+    stroke: #b9e5fa;
+    stroke-width: 2;
+}
+
+
+/* TEXTO DE LOS CATETOS */
+
+.texto-etiqueta {
+    fill: #0874c8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+
+/* ETIQUETA HIPOTENUSA */
+
+.etiqueta-hipotenusa {
+    fill: #1675e5;
+    stroke: #1675e5;
+    stroke-width: 2;
+}
+
+
+/* TEXTO HIPOTENUSA */
+
+.texto-hipotenusa {
+    fill: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+
+/* EXPLICACIÓN */
+
+.explicacion-triangulo {
+    margin-top: 20px;
+    padding: 18px 22px;
+    border: 1px solid #c9eafb;
+    border-radius: 16px;
+    background: #f0faff;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.explicacion-triangulo p {
+    margin: 0;
+    color: #3987c8;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+.icono-info {
+    font-size: 24px;
+    color: #0874c8;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .visual {
+        grid-column: 1;
+    }
+
+    .grafico-triangulo {
+        height: 350px;
+    }
+
+    .texto-etiqueta,
+    .texto-hipotenusa {
+        font-size: 17px;
+    }
+
+}
