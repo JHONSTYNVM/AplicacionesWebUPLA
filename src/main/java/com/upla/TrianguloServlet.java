@@ -7,50 +7,66 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "TrianguloServlet", urlPatterns = {"/triangulo"})
+@WebServlet("/triangulo")
 public class TrianguloServlet extends HttpServlet {
 
+    // ==========================================
+    // CUANDO ENTRAMOS DIRECTAMENTE A /triangulo
+    // ==========================================
     @Override
-    protected void doPost(
-            HttpServletRequest request,
-            HttpServletResponse response)
+    protected void doGet(HttpServletRequest request,
+                         HttpServletResponse response)
             throws ServletException, IOException {
+
+        // Mostrar la página del triángulo
+        request.getRequestDispatcher("/triangulo.jsp")
+               .forward(request, response);
+    }
+
+    // ==========================================
+    // CUANDO PRESIONAMOS "CALCULAR HIPOTENUSA"
+    // ==========================================
+    @Override
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response)
+            throws ServletException, IOException {
+
+        // Obtener los valores ingresados
+        String valorA = request.getParameter("catetoA");
+        String valorB = request.getParameter("catetoB");
 
         try {
 
-            // Obtener los valores enviados desde el JSP
-            double catetoA = Double.parseDouble(
-                    request.getParameter("catetoA")
-            );
+            double catetoA = Double.parseDouble(valorA);
+            double catetoB = Double.parseDouble(valorB);
 
-            double catetoB = Double.parseDouble(
-                    request.getParameter("catetoB")
-            );
-
-            // Calcular la hipotenusa
+            // Teorema de Pitágoras
             double hipotenusa = Math.sqrt(
                     Math.pow(catetoA, 2)
-                    + Math.pow(catetoB, 2)
+                    +
+                    Math.pow(catetoB, 2)
             );
 
-            // Redondear a 2 decimales
-            hipotenusa = Math.round(hipotenusa * 100.0) / 100.0;
-
-            // Enviar los resultados al JSP
+            // Enviar datos al JSP
             request.setAttribute("catetoA", catetoA);
             request.setAttribute("catetoB", catetoB);
-            request.setAttribute("hipotenusa", hipotenusa);
+            request.setAttribute("hipotenusa",
+                    String.format("%.2f", hipotenusa));
 
-            // Regresar a la página
-            request.getRequestDispatcher("triangulo.jsp")
-                    .forward(request, response);
+            // Mostrar nuevamente la página
+            request.getRequestDispatcher("/triangulo.jsp")
+                   .forward(request, response);
 
         } catch (NumberFormatException e) {
 
-            response.sendError(
-                    HttpServletResponse.SC_BAD_REQUEST,
-                    "Los valores ingresados no son válidos."
+            // Si los datos no son válidos
+            request.setAttribute(
+                    "error",
+                    "Ingrese valores numéricos válidos."
             );
+
+            request.getRequestDispatcher("/triangulo.jsp")
+                   .forward(request, response);
         }
     }
 }
